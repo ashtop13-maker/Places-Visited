@@ -17,13 +17,9 @@ body {
 li {
   cursor: pointer;
   margin: 5px 0;
-  color: blue;
+  color: rgb(255, 51, 0);
+  list-style-type: none;
 }
-
-li:hover {
-  text-decoration: underline;
-}
-
 #eventDetailsOfPlace {
   margin-top: 20px;
   white-space: pre-line; /*CSS tells the browser to respect those new lines*/
@@ -41,6 +37,65 @@ h1 {
     width: 100%;
     padding: 40px;
 }
-ul{
-    list-style-type: none;
+.glow-container {
+  position: relative;
+  border-radius: 20px;
+  padding: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2); /* subtle outer glow */
 }
+
+/* Static Base Circuit */
+.glow-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 4px;
+  background: conic-gradient(
+    #00f0ff,
+    #0fffc1,
+    #00f0ff,
+    #6a00ff,
+    #00f0ff
+  );
+  filter: brightness(0.8);
+  z-index: -3;
+  pointer-events: none;
+}
+
+/* Multi-Pulse Layer */
+.glow-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 4px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(0,255,255,0.05) 0deg,
+    rgba(0,255,255,0.2) 60deg,
+    rgba(0,255,255,0.05) 120deg,
+    rgba(0,255,255,0.3) 180deg,
+    rgba(0,255,255,0.05) 240deg,
+    rgba(0,255,255,0.25) 300deg,
+    rgba(0,255,255,0.05) 360deg
+  );
+  z-index: -2;
+  pointer-events: none;
+  animation: pulseRotate 5s linear infinite, pulseFade 2s ease-in-out infinite alternate;
+}
+
+/* Rotation animation */
+@keyframes pulseRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Fading in/out to mimic energy pulses */
+@keyframes pulseFade {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
