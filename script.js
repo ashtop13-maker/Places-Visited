@@ -52,7 +52,6 @@ const washington = new Place(
   "Historic landmarks and monuments"
 );
 
-// Store all places in an array
 const places = [malindi, shanzu, diani, doha, washington];
 //UI logic
 document.addEventListener("DOMContentLoaded", function() {
