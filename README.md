@@ -1,3 +1,19 @@
+# Places Visited
+ Places visited web is a website where it shows the places I've visited using javascript and UI logic.
+
+## Author
+Asher Mburu
+
+## Technology 
+HTML
+CSS
+Javascript
+
+## How to run the project 
+- Clone repository
+- Open the project folder cd Places-visited
+- Open index.html in your browser or use Live server in vscode for better experience
+
 ## Tests
 
 ### Test 1: Constructor Creates Object
@@ -24,3 +40,10 @@ Expected Output:
 Landmarks: Vasco da Gama Pillar
 Time of Year: December
 Notes: Hot"
+
+
+## CONTRIBUTIONS 
+Contributions are welcome. Feel free to download the repository and submit a pull request
+
+## LICENSE 
+This project is for personal and portfolio use.
