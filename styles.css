@@ -1,6 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #66b7ea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
 }
 
 li {
@@ -16,4 +27,17 @@ li:hover {
 #eventDetailsOfPlace {
   margin-top: 20px;
   white-space: pre-line; /*CSS tells the browser to respect those new lines*/
+}
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
 }
