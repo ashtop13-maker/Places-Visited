@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+li {
+  cursor: pointer;
+  margin: 5px 0;
+  color: blue;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+#eventDetailsOfPlace {
+  margin-top: 20px;
+  white-space: pre-line; /*CSS tells the browser to respect those new lines*/
+}
